@@ -1,0 +1,24 @@
+:root {
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    --background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --dark-red: #B8272C;
+  }
+  @font-face {
+    font-family: 'protest';
+    src: url('fonts/protest/ProtestGuerrilla-Regular.ttf') format('truetype'), /* Modern browsers */;
+    font-weight: normal; 
+    font-style: normal; 
+  }
+  html,body {
+    margin: 0;
+  }
+  * {
+    box-sizing: border-box;
+  }
