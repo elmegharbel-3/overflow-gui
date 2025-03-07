@@ -9,6 +9,7 @@
     import VidSec from '$lib/VidSec.svelte'
     import Timer from '$lib/Timer.svelte'
     import Check from "$lib/Check.svelte";
+    import Mouvement from "$lib/Mouvement.svelte";
   </script>
   <Head_3>
     <div class="logo">
@@ -26,7 +27,7 @@
   <VidSec></VidSec>
   <footer>
     <Timer></Timer>
-    <div style="border: 1px solid var(--dark-red);"></div>
+    <Mouvement></Mouvement>
     <div style="border: 1px solid var(--dark-red);"></div>
     <Check></Check>
   </footer>

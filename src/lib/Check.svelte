@@ -57,6 +57,12 @@
     .checklist input {
     display: none;
   }
+  .item {
+    transition: 0.4s;
+  }
+  .checklist-item:hover .item {
+    color: white;
+  }
   .number {
     color: rgba(255, 255, 255, 0.452);
   }

@@ -45,6 +45,7 @@
 
 <style>
   .timer {
+    background-color: #242424;
     display: flex;
     flex-direction: column;
     align-items: center;
