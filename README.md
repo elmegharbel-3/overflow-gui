@@ -41,3 +41,11 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 >>>>>>> cd65140 (initialization-gui-sveltekit)
+
+## Main Page
+1.Cameras: 6 feeds and the option to select 3 as your main feeds
+2.Timer: 15 minute timer
+3.Checklist: a checklist for all the rov missions
+4.NavBar: each button sends you to a separate page for each part of the gui
+5.Capture: a separate page that facilitate the capture of the photosphere's images
+6.ROV: a separate page that displays a 3 model of The ROV that can easily be manipulated by code
