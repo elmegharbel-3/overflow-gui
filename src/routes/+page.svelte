@@ -8,6 +8,7 @@
     import VidMini from '$lib/VidMini.svelte';
     import VidSec from '$lib/VidSec.svelte'
     import Timer from '$lib/Timer.svelte'
+    import Check from "$lib/Check.svelte";
   </script>
   <Head_3>
     <div class="logo">
@@ -25,6 +26,9 @@
   <VidSec></VidSec>
   <footer>
     <Timer></Timer>
+    <div style="border: 1px solid var(--dark-red);"></div>
+    <div style="border: 1px solid var(--dark-red);"></div>
+    <Check></Check>
   </footer>
   <style>
     .logo img {
@@ -49,7 +53,7 @@
   }
   footer {
     display: grid;
-    grid-template-columns: 200px repeat(2,1fr);
+    grid-template-columns: 200px repeat(2,1fr) 300px;
     grid-template-rows: calc(0.22 * 100vh - 3px);
   }
   </style>
