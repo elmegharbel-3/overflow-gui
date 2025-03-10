@@ -14,9 +14,9 @@
     let pool3 = "pool3.jpg";
     let pool4 = "pool4.jpg";
     let mainStreams = {
-    1: pool1,
-    2: pool2,
-    3: pool2
+    1: "none",
+    2: "none",
+    3: "none"
   };
   console.log(mainStreams)
   console.log(mainStreams[0])

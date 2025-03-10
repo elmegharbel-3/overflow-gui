@@ -3,9 +3,11 @@
     import { createEventDispatcher } from "svelte";
     let img ;
     let message ;
+    let list;
     function handleError() {
-        img.style.display = "block"
+        img.style.display = "none"
         message.style.display = "block"
+        list.classList.remove("options");
         console.log("source not valid")
     }
     const dispatch = createEventDispatcher();
@@ -15,7 +17,7 @@
 </script>
 <div class="vid-mini" >
     <img  src={source} alt="video-stream" bind:this={img} on:error={handleError}>
-    <ul style="display: none;">
+    <ul style="display: none;" class="options" bind:this={list}>
         <li><button on:click={() => selectStream(1)}>1</button></li>
         <li><button on:click={() => selectStream(2)}>2</button></li>
         <li><button on:click={() => selectStream(3)}>3</button></li>
@@ -35,8 +37,17 @@
         height: 100%;
     }
     .vid-mini p {
-        color: white;
-        background-color: black;
+        color: var(--dark-red);
+        background-color: #242424;
+        /* padding: 5px; */
+        margin: 0;
+        font-weight: bold;
+        /* padding: 5px; */
+        height: 100%;
+        line-height: 95px;
+        font-family: cursive;
+        font-size: 14px;
+        text-align: center;
     }
     .vid-mini ul {
         position: absolute;
@@ -50,7 +61,7 @@
         bottom: 10px;   
         transition: 1s;
     }
-    .vid-mini:hover ul {
+    .vid-mini:hover .options {
         display: flex !important;
     }
     .vid-mini ul li {

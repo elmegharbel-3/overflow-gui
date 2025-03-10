@@ -9,26 +9,33 @@
         message.style.display = "block"
         console.log("source not valid")
     }
-    function getBack() {
+    function onLoad() {
         console.log("stream is added")
         img.style.display = "block"
         message.style.display = "none"
     }
 </script>
-    <img src={source} class={level} alt="main stream" bind:this={img} on:error={handleError} on:load{}>
-    <p style="display: none;" bind:this={message}>Click on Stream to add here</p>
+    <div class="{level}">
+        <img src={source} class={level} alt="main stream" bind:this={img} on:error={handleError} on:load={onLoad}>
+        <p style="display: none;" bind:this={message}>Click on Stream to add here</p>
+    </div>
 <style>
-    .one,
-    .two,
-    .three {
+    div {
         height: 100%;
-        border: var(--dark-red) 3px solid;
+        position: relative;
     }
-    .two {
+    .one img {
+        margin: 0 auto;
+    }
+    .two img {
         margin-left: auto;
     }
-    .three{
+    .three img{
         margin-right: auto;
+    }
+    img {
+        border: var(--dark-red) 3px solid;
+        height: 100%;
     }
     p {
         background-color: rgb(49, 45, 45);
@@ -36,5 +43,10 @@
         margin: 0 auto;
         padding: 10px;
         border-radius: 3px;
+        position: absolute;
+        width: fit-content;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
 </style>

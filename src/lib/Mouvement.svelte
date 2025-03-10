@@ -31,9 +31,9 @@
         <ul>
             {#each grippers as gripper}
                 {#if gripper.status == true}
-                    <div>{gripper.index}:on</div>
+                    <div>{gripper.index}: on</div>
                 {:else}
-                    <div>{gripper.index}:off</div>
+                    <div>{gripper.index}: off</div>
                 {/if}
             {/each}
         </ul>
@@ -75,8 +75,6 @@
         text-transform: uppercase;
         font-size: 18px;
         padding: 5px;
-    }
-    .direction {
     }
     .bottom {
         width: calc(100% / 3 - 5px);
