@@ -42,6 +42,7 @@
       padding: 10px;
       justify-content: center;
       border: 1px solid var(--dark-red);
+      border-left: none;
       background-color: #242424;
     }
     .checklist-item {

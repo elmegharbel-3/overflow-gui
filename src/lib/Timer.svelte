@@ -55,6 +55,7 @@
     padding: 5px;
     text-align: center;
     border: 1px solid var(--dark-red);
+    border-right: none;
   }
   .timer h2 {
     color: var(--dark-red);

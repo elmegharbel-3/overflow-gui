@@ -64,6 +64,8 @@
         justify-content: center;
         padding: 20px;
         background-color: #242424;
+        border-right: none;
+        border-left:none;
     }
     .mouvement > div {
         border: 1px solid #ffffff;

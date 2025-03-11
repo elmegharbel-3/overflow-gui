@@ -10,6 +10,7 @@
     import Timer from '$lib/Timer.svelte'
     import Check from "$lib/Check.svelte";
     import Mouvement from "$lib/Mouvement.svelte";
+    import Sensor from "$lib/Sensor.svelte";
   </script>
   <Head_3>
     <div class="logo">
@@ -28,7 +29,9 @@
   <footer>
     <Timer></Timer>
     <Mouvement></Mouvement>
-    <div style="border: 1px solid var(--dark-red);"></div>
+    <div class="sensors">
+      <Sensor sensor = "Depth" max=5.5 value=3></Sensor>
+    </div>
     <Check></Check>
   </footer>
   <style>
@@ -51,6 +54,14 @@
       text-shadow: var(--dark-red) 0px -2px 3px;
       color: whitesmoke;
       cursor: default;
+  }
+  .sensors {
+    padding: 10px;
+    background-color: #242424;
+    border: 1px solid var(--dark-red);
+    padding-top: 20px;
+    border-right: none;
+    border-left: none;
   }
   footer {
     display: grid;
