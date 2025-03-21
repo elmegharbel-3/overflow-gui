@@ -1,8 +1,17 @@
 <script>
     export let level;
     export let source;
+    import { onMount } from 'svelte';
     let img;
     let message;
+    onMount(() => {
+        console.log(img.source)
+        if (img.source === undefined) {
+            console.log("on mount func")
+            img.style.display = "none"
+            message.style.display = "block"
+        }
+    });
     function handleError() {
         console.log("no stream added yet")
         img.style.display = "none"
@@ -14,6 +23,13 @@
         img.style.display = "block"
         message.style.display = "none"
     }
+    onMount(() => {
+        if (img.source === 'none') {
+            console.log("on mount func")
+            img.style.display = "none"
+            message.style.display = "block"
+        }
+    });
 </script>
     <div class="{level}">
         <img src={source} class={level} alt="main stream" bind:this={img} on:error={handleError} on:load={onLoad}>

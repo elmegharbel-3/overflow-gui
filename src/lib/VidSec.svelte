@@ -2,8 +2,6 @@
     import CamCol from "$lib/CamCol.svelte"
     import VidMini from "$lib/VidMini.svelte"
     import VidMain from "$lib/VidMain.svelte"
-    import { onMount } from 'svelte';
-    export let state = "integrated";
     let img;
     let message;
     let section;
@@ -38,16 +36,6 @@
     console.error(`Level ${level} is not valid`, event.detail);
   }
 }
-onMount(() => {
-    if (state === "main") {
-    console.log("true")
-    if (section) {
-        console.log("truuuuuue")
-        section.style.gridTemplateRows = "calc(100vh - 3px)"
-    }
-}
-  });
-
 </script>
 <div id="cam-section" bind:this={section}>
     <CamCol>

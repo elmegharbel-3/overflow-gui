@@ -21,8 +21,7 @@
       <NavButt value="Cameras" nav="Stream"/>
       <NavButt value="Capture" nav="Capture"/>
       <NavButt value="ROV" nav="ROV"/>
-      <NavButt value="Mouvement" nav="Mouvement"/>
-      <NavButt value="Sensors" nav="Sensors"/>
+      <NavButt value="Command" nav="Command"/>
     </Nav>
   </Head_3>
   <VidSec></VidSec>
