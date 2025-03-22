@@ -5,8 +5,8 @@
     let img;
     let message;
     let section;
-    let Logo = "overflow_logo-removebg-preview.png"
-    let back = "overflow_logo-removebg-preview.png"
+    let Logo = "overflow_logo-removebg-preview.png";
+    let back = "overflow_logo-removebg-preview.png";
     let pool1 = "pool1.webp";
     let pool2 = "pool2.jpg";
     let pool3 = "pool3.jpg";
