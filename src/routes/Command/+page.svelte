@@ -4,7 +4,8 @@
     let command = '';
     let output = '';
     let ws;
-
+    let run;
+    let stop;
     function startWebSocket() {
         if (ws) {
             ws.close();
@@ -31,12 +32,20 @@
             ws.close();
         }
     }
+    document.body.addEventListener("keydown",(e) => {
+        if (e.key == "Enter") {
+            run.click()
+        }
+        else if (e.key == "s" && e.target.tagName !== "INPUT") {
+            stop.click()
+        }
+    })
 </script>
 <div class="main">
     <NavButt value="Main" nav=""></NavButt>
     <input bind:value={command} placeholder="Enter command" />
-    <button class="run" on:click={startWebSocket}>Run</button>
-    <button class="stop" on:click={stopCommand}>Stop</button>
+    <button class="run" on:click={startWebSocket} bind:this={run}>Run</button>
+    <button class="stop" on:click={stopCommand} bind:this={stop}>Stop</button>
 </div>
 
 
